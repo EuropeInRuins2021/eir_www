@@ -188,6 +188,7 @@ section .content {
     width: 100%;
     height: 330px;
     background: #000;
+    display: block;
 }
 
 .video-item iframe {
@@ -200,8 +201,13 @@ section .content {
     box-shadow: rgba(0, 0, 0, 0.3) 0 19px 38px, rgba(0, 0, 0, 0.22) 0 15px 12px;
 }
 
+.video-item .description a {
+    width: 100%;
+    min-height: 65px;
+    display: block;
+}
+
 .news-item .image {
-    /*background: url("images/tiger.png") no-repeat center;*/
     overflow: hidden;
     width: 100%;
     height: 171px;

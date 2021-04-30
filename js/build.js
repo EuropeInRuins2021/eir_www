@@ -47,17 +47,25 @@ function renderSheetData(sheetData, sheetIndex) {
             continue
         }
 
+        if (key === 'USE-STATIC-TWITCH' && value === "1") {
+            var twitch_video = document.querySelector('#channels .video-item-2');
+            var static_twitch = document.querySelector('#channels .static-twitch');
+            if (twitch_video != null && static_twitch != null) {
+                twitch_video.remove();
+                static_twitch.style.display = 'block';
+            }
+            continue;
+        }
+        var element = document.querySelector(`.sheet-${sheetIndex + 1} [data-src='${key}']`);
+        if (element == null) {
+            continue;
+        }
         if (key.endsWith('-link')) {
-            document.querySelector(`.sheet-${sheetIndex + 1} [data-src='${key}']`).setAttribute('href', value);
-        }
-        else if (key.endsWith('-image')) {
-            document.querySelector(`.sheet-${sheetIndex + 1} [data-src='${key}']`).setAttribute('src', value);
-        }
-        else if (key.endsWith('-source')) {
-            document.querySelector(`.sheet-${sheetIndex + 1} [data-src='${key}']`).setAttribute('src', value);
-        }
-        else {
-            document.querySelector(`.sheet-${sheetIndex + 1} [data-src='${key}']`).innerHTML = value;
+            element.setAttribute('href', value);
+        } else if (key.endsWith('-image') || key.endsWith('-source')) {
+            element.setAttribute('src', value);
+        } else {
+            element.innerHTML = value;
         }
     }
 }
