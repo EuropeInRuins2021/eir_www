@@ -72,6 +72,11 @@ ul, ol {
     padding-right: 25px;
 }
 
+#help .video-tutorials {
+    display: block;
+    height: auto;
+}
+
 #help li,
 #resources li {
     margin: 0;
@@ -140,10 +145,6 @@ h1, h2 {
     height: auto;
 }
 
-#about .video-intro .description {
-    display: none;
-}
-
 #about .video-intro iframe {
     width: 100%;
 }
@@ -180,14 +181,14 @@ section .content {
 .video-item {
     width: 304px;
     height: 256px;
-    border: 1px solid #000;
+    border: none;
     margin: 10px 0;
 }
 
 .video-item {
     width: 100%;
     height: 330px;
-    background: #000;
+    background: transparent;
     display: block;
 }
 
@@ -202,9 +203,35 @@ section .content {
 }
 
 .video-item .description a {
-    width: 100%;
-    min-height: 65px;
+    width: 182px;
+    height: 38px;
+	padding: 10px;
+	margin-left: 200px;
+	transform: rotate(-2deg) skew(-9deg);
     display: block;
+	text-align: center;
+	background: #272722 no-repeat center;
+	background-size: cover;
+	background-origin: content-box;
+	text-indent: -99999em;
+	overflow: hidden;
+	border: #000 1px solid;
+	position: relative;
+}
+
+.video-item .description a:hover {
+    box-shadow: rgba(0, 0, 0, 0.3) 0 19px 38px, rgba(0, 0, 0, 0.22) 0 15px 12px;
+}
+
+.video-item-1 .description a {
+    background-image: url("images/youtube.png")
+}
+.video-item-2 .description a {
+    background-image: url("images/twitch.png")
+}
+.video-item-1 iframe,
+.video-item-2 iframe {
+    margin-top: -20px;
 }
 
 .news-item .image {
@@ -342,7 +369,6 @@ span.icon {
     border-radius: 10px;
     width: 45px;
     height: 45px;
-
 }
 
 #discord-widget .d-description {
