@@ -221,11 +221,10 @@ section .content {
 }
 
 .video-item .description a {
-    width: 182px;
-    height: 38px;
-	padding: 10px;
+    width: 212px;
+    height: 58px;
+	padding: 5px 15px;
 	margin: 0 auto;
-	transform: rotate(-2deg) skew(-9deg);
     display: block;
 	text-align: center;
 	background: #272722 no-repeat center;
@@ -246,10 +245,6 @@ section .content {
 }
 .video-item-2 .description a {
     background-image: url("images/twitch.png")
-}
-.video-item-1 iframe,
-.video-item-2 iframe {
-    margin-top: -20px;
 }
 
 .news-item .image {
@@ -574,8 +569,5 @@ span.icon {
     .video-item iframe {
         width: 450px;
     }
-    .video-item .description a {
-	   margin: 0 0 0 200px;
-	}
 
 }
